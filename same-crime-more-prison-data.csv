@@ -1,23 +1,43 @@
 measure,state,value,unit,year,source
 violent_crime_rate,Idaho,231,per 100k residents,2024,FBI UCR via USAFacts
-violent_crime_rate,Utah,230,per 100k residents,2024,FBI UCR via USAFacts
-violent_crime_rate,Oregon,331,per 100k residents,2024,FBI UCR via USAFacts
-violent_crime_rate,Washington,326,per 100k residents,2024,FBI UCR via USAFacts
-violent_crime_rate,United States,360,per 100k residents,2024,FBI UCR via USAFacts
 property_crime_rate,Idaho,736,per 100k residents,2024,FBI UCR via USAFacts
+state_imprisonment_rate,Idaho,490,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,Utah,230,per 100k residents,2024,FBI UCR via USAFacts
 property_crime_rate,Utah,1409,per 100k residents,2024,FBI UCR via USAFacts
+state_imprisonment_rate,Utah,186,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,Wyoming,203,per 100k residents,2024,FBI UCR via USAFacts
+property_crime_rate,Wyoming,1232,per 100k residents,2024,FBI UCR via USAFacts
+state_imprisonment_rate,Wyoming,378,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,Montana,424,per 100k residents,2024,FBI UCR via USAFacts
+property_crime_rate,Montana,1617,per 100k residents,2024,FBI UCR via USAFacts
+state_imprisonment_rate,Montana,438,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,Nevada,402,per 100k residents,2024,FBI UCR via USAFacts
+property_crime_rate,Nevada,2197,per 100k residents,2024,FBI UCR via USAFacts
+state_imprisonment_rate,Nevada,327,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,Oregon,331,per 100k residents,2024,FBI UCR via USAFacts
 property_crime_rate,Oregon,2388,per 100k residents,2024,FBI UCR via USAFacts
+state_imprisonment_rate,Oregon,291,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,Washington,326,per 100k residents,2024,FBI UCR via USAFacts
 property_crime_rate,Washington,2467,per 100k residents,2024,FBI UCR via USAFacts
-property_crime_rate,United States,1760,per 100k residents,2024,FBI UCR via USAFacts
-imprisonment_rate,Idaho,490,sentenced state prisoners per 100k residents,2023,BJS Prisoners in 2023 via USAFacts and Idaho Capital Sun
-imprisonment_rate,Utah,186,sentenced state prisoners per 100k residents,2023,BJS Prisoners in 2023 via USAFacts and Idaho Capital Sun
-imprisonment_rate,Oregon,291,sentenced state prisoners per 100k residents,2023,BJS Prisoners in 2023 via USAFacts and Idaho Capital Sun
-imprisonment_rate,Washington,181,sentenced state prisoners per 100k residents,2023,BJS Prisoners in 2023 via USAFacts and Idaho Capital Sun
-imprisonment_rate,United States,360,sentenced state prisoners per 100k residents,2023,BJS Prisoners in 2023 via USAFacts and Idaho Capital Sun
-women_imprisonment_rate,Idaho,152,per 100k women,2023,Idaho Department of Correction via East Idaho News
-women_imprisonment_rate,Utah,28,per 100k women,2023,Idaho Department of Correction via East Idaho News
-men_imprisonment_rate,Idaho,823,per 100k men,2023,Idaho Department of Correction via East Idaho News
-men_imprisonment_rate,Utah,340,per 100k men,2023,Idaho Department of Correction via East Idaho News
+state_imprisonment_rate,Washington,181,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+state_imprisonment_rate,U.S. states combined,318,sentenced state prisoners per 100k residents,2023,"BJS Prisoners in 2023, Table 7"
+violent_crime_rate,United States,360,per 100k residents (approx.),2024,FBI UCR via USAFacts
+state_imprisonment_rate,Idaho,461,sentenced state prisoners per 100k residents,2022,"BJS Prisoners in 2023, Table 7"
+state_imprisonment_rate,Utah,177,sentenced state prisoners per 100k residents,2022,"BJS Prisoners in 2023, Table 7"
+women_imprisonment_rate,Idaho,132,per 100k women,2022,"BJS Prisoners in 2023, Table 7"
+women_imprisonment_rate,Idaho,152,per 100k women,2023,"BJS Prisoners in 2023, Table 7"
+women_imprisonment_rate,Utah,26,per 100k women,2022,"BJS Prisoners in 2023, Table 7"
+women_imprisonment_rate,Utah,28,per 100k women,2023,"BJS Prisoners in 2023, Table 7"
+men_imprisonment_rate,Idaho,823,per 100k men,2023,"BJS Prisoners in 2023, Table 7"
+men_imprisonment_rate,Utah,340,per 100k men,2023,"BJS Prisoners in 2023, Table 7"
+prison_population,Idaho,9110,people under state jurisdiction,2022,"BJS Prisoners in 2023, Table 2"
+prison_population,Idaho,9829,people under state jurisdiction,2023,"BJS Prisoners in 2023, Table 2"
+prison_population,Utah,6009,people under state jurisdiction,2022,"BJS Prisoners in 2023, Table 2"
+prison_population,Utah,6402,people under state jurisdiction,2023,"BJS Prisoners in 2023, Table 2"
+women_in_prison,Idaho,1296,people,2022,"BJS Prisoners in 2023, Table 2"
+women_in_prison,Idaho,1518,people,2023,"BJS Prisoners in 2023, Table 2"
+women_in_prison,Utah,442,people,2022,"BJS Prisoners in 2023, Table 2"
+women_in_prison,Utah,473,people,2023,"BJS Prisoners in 2023, Table 2"
 people_under_idoc_jurisdiction,Idaho,10023,people,2026-01-01,Idaho Capital Sun via Prison Legal News
 in_state_prison_capacity,Idaho,8200,beds (approx.),2026,Idaho Capital Sun via Prison Legal News
 in_state_prison_capacity,Idaho,7100,beds (approx.),2019,Idaho Capital Sun via Prison Legal News
@@ -25,3 +45,8 @@ held_in_county_jails,Idaho,991,people (monthly projection),2025-10,Idaho Capital
 held_out_of_state,Idaho,761,people (monthly projection),2025-10,Idaho Capital Sun via Prison Legal News
 overflow_housing_cost,Idaho,51000000,USD (expected annual),FY2026,Idaho Capital Sun via Prison Legal News
 new_bed_request,Idaho,45300000,USD,FY2027 request,Idaho Department of Correction via East Idaho News
+daily_cost_prison,Idaho,100,USD per person per day,2026,InvestigateWest via East Idaho News
+daily_cost_parole,Idaho,9,USD per person per day,2026,InvestigateWest via East Idaho News
+admissions_from_revocations_and_riders,Idaho,87,percent of prison admissions,2012,CSG Justice Center
+women_granted_parole,Idaho,2400,women (more than),2019-2025,InvestigateWest via East Idaho News
+women_release_6mo_plus_after_hearing,Idaho,463,women (at least),2019-2025,InvestigateWest via East Idaho News
