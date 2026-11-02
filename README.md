@@ -8,7 +8,6 @@ A multi-page static site for GitHub Pages.
 | --- | --- |
 | index.html | Home |
 | research.html | Research |
-| long-sentences.html | Issue explainer: Long and life sentences in Washington |
 | review-act.html | Research brief: Who would benefit from the Review Act |
 | about.html | About |
 | toolkit.html | Advocacy Toolkit |
