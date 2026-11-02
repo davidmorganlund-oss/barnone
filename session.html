@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2027 Session Tracker | BarNone</title>
+<meta name="description" content="BarNone's tracker for Washington's 2027 legislative session: bills on corrections and reentry, voting rights, jails and local justice, and the state workforce.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&family=Michroma&family=Public+Sans:ital,wght@0,400..700;1,400&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.bill-group { display: grid; gap: .8rem; }
+.bill-group + .bill-group { margin-top: 2.4rem; }
+.bill-table td:first-child { white-space: nowrap; font-weight: 700; }
+.bill-table .when { white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bill-status { display: inline-block; font-size: var(--step--1); font-weight: 700; border-radius: 999px; padding: .15rem .6rem; background: var(--tint); color: var(--red-text); white-space: nowrap; }
+.bill-status.law { background: var(--red); color: #fff; }
+.bill-status.dead { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html" aria-label="BarNone home"><span class="logo logo-sm" aria-hidden="true"></span><span class="wordmark">BARNONE</span></a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Show menu">
+    <label class="nav-btn" for="nav-toggle">Menu</label>
+    <nav class="site-nav" aria-label="Main"><ul><li><a href="research.html" aria-current="page">Research</a></li><li><a href="about.html">About</a></li><li><a href="toolkit.html">Toolkit</a></li><li><a href="reentry.html">Reentry Help</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li><li><a class="nav-give" href="donate.html">Donate</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="wrap">
+  <a class="back" href="research.html">&larr; Research</a>
+  <p class="eyebrow">Washington Legislature &middot; 2027 session</p>
+  <h1>The 2027 session, bill by bill</h1>
+  <p class="lede">Washington's 105-day session begins January 11, 2027. We'll follow the bills that decide who goes to prison, for how long, and what happens when they come home.</p>
+  <p class="source-line" id="updated">Tracking starts when bills are introduced. Status comes from the Washington State Legislature.</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="section-head"><p class="eyebrow">What we track</p><h2>Four areas</h2></div>
+  <div class="grid-2">
+    <div class="card"><p class="kicker">Area 1</p><h3>Corrections and reentry</h3><p class="muted">Sentencing, second look and resentencing, earned release, prison conditions, and support for people coming home.</p></div>
+    <div class="card"><p class="kicker">Area 2</p><h3>Voting rights</h3><p class="muted">Voting for people with convictions, in jail, or under supervision, and how the state tells them their rights.</p></div>
+    <div class="card"><p class="kicker">Area 3</p><h3>Jails and local justice</h3><p class="muted">Pretrial detention, jail standards and expansion, diversion, and county costs.</p></div>
+    <div class="card"><p class="kicker">Area 4</p><h3>State workforce and higher education</h3><p class="muted">Corrections staffing and the state workforce, and education in and after prison.</p></div>
+  </div>
+</div></section>
+
+<section class="section" id="bills"><div class="wrap">
+  <div class="section-head"><p class="eyebrow">Bills</p><h2>Where they stand</h2></div>
+  <div id="bill-list">
+    <div class="callout">
+      <p><strong>Bill tracking opens with the session.</strong> Once bills are filed, this page will list each one we follow, grouped by area, with its current status, latest action and a link to the official bill page.</p>
+      <p class="muted">For the record on last biennium's sentencing bills, see Brief No. 3, <a href="review-act.html#record">Who would benefit from the Review Act</a>.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap split">
+  <div class="section-head" style="margin:0"><p class="eyebrow">How we track</p><h2>Our method</h2></div>
+  <div class="prose">
+    <ul>
+      <li><strong>Official status only.</strong> Every status and action comes from the Washington State Legislature's own bill records, and each bill links to its official page.</li>
+      <li><strong>Plain-language summaries.</strong> We describe what each bill does in a sentence. We don't predict outcomes.</li>
+      <li><strong>Dated updates.</strong> The page shows when it was last refreshed.</li>
+    </ul>
+    <p><strong>Legislative staff and partners:</strong> if there's a bill we should be watching, <a href="contact.html">tell us</a>.</p>
+  </div>
+</div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html"><span class="logo logo-sm" aria-hidden="true"></span><span class="wordmark">BARNONE</span></a>
+        <p>BarNone, Inc. is a nonpartisan 501(c)(3) research and policy organization focused on incarceration in Idaho, Washington, and Oregon.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="session.html">2027 Session Tracker</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reentry.html">Reentry Resources</a></li>
+          <li><a href="toolkit.html">Advocacy Toolkit</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Reach us</h2>
+        <ul>
+          <li>admin@barnoneinc.org</li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 BarNone, Inc. All rights reserved.</span>
+      <span>Research. Policy. Grace, bar none.</span>
+    </div>
+  </div>
+</footer>
+<script src="site.js"></script>
+<script>
+(function () {
+  var areas = ['Corrections and reentry', 'Voting rights', 'Jails and local justice', 'State workforce and higher education'];
+  function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+  function cls(st) { st = (st || '').toLowerCase(); return /law|signed/.test(st) ? 'law' : /dead|failed|died/.test(st) ? 'dead' : ''; }
+  fetch('bills.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || !d.bills || !d.bills.length) return;
+    if (d.updated) document.getElementById('updated').textContent = 'Last updated ' + d.updated + '. Status comes from the Washington State Legislature.';
+    var html = '';
+    areas.forEach(function (a) {
+      var rows = d.bills.filter(function (b) { return b.area === a; });
+      if (!rows.length) return;
+      html += '<div class="bill-group"><h3>' + esc(a) + '</h3><div class="table-scroll"><table class="state-table bill-table"><thead><tr><th>Bill</th><th>What it does</th><th>Status</th><th>Latest action</th></tr></thead><tbody>';
+      rows.forEach(function (b) {
+        var id = b.url ? '<a href="' + esc(b.url) + '">' + esc(b.bill) + '</a>' : esc(b.bill);
+        html += '<tr><td>' + id + '</td><td>' + esc(b.summary) + '</td><td><span class="bill-status ' + cls(b.status) + '">' + esc(b.status) + '</span></td><td>' + esc(b.last_action) + (b.last_action_date ? '<br><span class="when">' + esc(b.last_action_date) + '</span>' : '') + '</td></tr>';
+      });
+      html += '</tbody></table></div></div>';
+    });
+    if (html) document.getElementById('bill-list').innerHTML = html;
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
