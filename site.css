@@ -265,7 +265,7 @@ main { display: block; }
 @keyframes lift { from { transform: translateY(18px); opacity: .2; } to { transform: none; opacity: 1; } }
 @keyframes underline { from { background-size: 0% .12em; } to { background-size: 100% .12em; } }
 
-:root { --logo: url("../images/phoenix.png"); }
+:root { --logo: url("phoenix.png"); }
 .logo { display: inline-block; background: var(--logo) center / contain no-repeat; aspect-ratio: 480 / 330; flex: none; }
 .logo-sm { width: 58px; }
 .logo-lg { width: 100%; max-width: 460px; display: block; margin-inline: auto; }
