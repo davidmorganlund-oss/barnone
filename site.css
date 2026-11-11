@@ -401,4 +401,14 @@ main { display: block; }
 .card-foot a.more { font-size: 1rem; }
 .status-dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; background: var(--ember); margin-right: .4rem; vertical-align: 1px; }
 
-
+/* Reentry state guides */
+a.state-card { text-decoration: none; color: inherit; }
+a.state-card h3 { color: var(--ink); }
+a.state-card .more { color: var(--red-text); margin-top: auto; }
+.fact-card p:last-child { margin: 0; }
+.res-group h3 { font-size: var(--step-1); }
+.res-list { list-style: none; padding: 0 !important; margin: 0; display: grid; gap: 1rem !important; }
+.res-list li { display: grid; gap: .15rem; }
+.res-name { font-weight: 700; }
+.res-what { color: var(--muted); font-size: .97rem; }
+.page-hero .eyebrow a { color: inherit; }
