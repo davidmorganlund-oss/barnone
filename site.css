@@ -401,3 +401,18 @@ main { display: block; }
 .card-foot a.more { font-size: 1rem; }
 .status-dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; background: var(--ember); margin-right: .4rem; vertical-align: 1px; }
 
+
+/* Project card: CivicsWA keeps its own colors */
+.project-card { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); border-radius: 12px; overflow: hidden; text-decoration: none; color: #fff; background: #0F3D4A; border: 1px solid #0F3D4A; transition: transform .25s ease, box-shadow .25s ease; }
+.project-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -16px rgba(15, 42, 51, .6); }
+.project-mark { background: #0F2A33; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: .4rem; padding: 2rem; }
+.cw-word { font-family: var(--f-head); font-weight: 800; font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -0.02em; line-height: 1; color: #fff; }
+.cw-word span { color: #FF8A4C; }
+.cw-url { color: #D7E4E7; font-size: var(--step--1); }
+.project-body { padding: 2rem; display: grid; gap: .8rem; align-content: start; }
+.project-body h3 { color: #fff; }
+.project-body p { margin: 0; color: #D7E4E7; }
+.project-body .cw-tag { font-size: var(--step--1); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #FF8A4C; }
+.cw-go { font-weight: 700; color: #FF8A4C; }
+.project-card:focus-visible { outline: 3px solid #FF8A4C; outline-offset: 3px; }
+@media (max-width: 800px) { .project-card { grid-template-columns: 1fr; } .project-mark { padding: 1.5rem; } .project-body { padding: 1.5rem; } }
