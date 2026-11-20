@@ -11,6 +11,7 @@ A multi-page static site for GitHub Pages.
 | same-crime-more-prison.html | Research Brief No. 1: Same crime, more prison (Idaho) |
 | long-sentences.html | Research Brief No. 2: Long and life sentences in Washington |
 | review-act.html | Research Brief No. 3: Who would benefit from the Review Act |
+| doc-year-end-spending.html | Research Brief No. 4: Year-end spending at the Department of Corrections (data: doc-year-end-spending-data.csv) |
 | session.html | 2027 session bill tracker (reads bills.json) |
 | about.html | About |
 | toolkit.html | Advocacy Toolkit |
