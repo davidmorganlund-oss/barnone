@@ -11,7 +11,8 @@ A multi-page static site for GitHub Pages.
 | same-crime-more-prison.html | Research Brief No. 1: Same crime, more prison (Idaho) |
 | long-sentences.html | Research Brief No. 2: Long and life sentences in Washington |
 | review-act.html | Research Brief No. 3: Who would benefit from the Review Act |
-| doc-year-end-spending.html | Research Brief No. 4: Year-end spending at the Department of Corrections (data: doc-year-end-spending-data.csv) |
+| smart-on-crime-washington.html | Research Brief No. 4: Smart on Crime, Smart on the Budget (Washington); full brief: smart-on-crime-washington.pdf |
+| smart-on-crime-idaho.html | Research Brief No. 5: Smart on Crime, Smart on the Budget: Idaho; full brief: smart-on-crime-idaho.pdf |
 | session.html | 2027 session bill tracker (reads bills.json) |
 | about.html | About |
 | toolkit.html | Advocacy Toolkit |
@@ -60,3 +61,7 @@ Briefs share one template in `site.css`: a `brief-head` with eyebrow "Research B
 ```
 
 `area` must be one of: Corrections and reentry; Voting rights; Jails and local justice; State workforce and higher education. A scheduled GitHub Action can regenerate this file; keep any API keys in the repository's Actions secrets, never in the page.
+
+## Tabled work
+
+The DOC year-end spending brief (formerly No. 4) was taken off the site on Nov. 22, 2026, until the research is finished. Its files are kept on the branch `tabled/brief-4-doc-year-end-spending`. Give it the next open number when it returns.

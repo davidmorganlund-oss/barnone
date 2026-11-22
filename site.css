@@ -412,3 +412,8 @@ a.state-card .more { color: var(--red-text); margin-top: auto; }
 .res-name { font-weight: 700; }
 .res-what { color: var(--muted); font-size: .97rem; }
 .page-hero .eyebrow a { color: inherit; }
+/* Brief PDF cover link (Briefs 4-5) */
+.brief-cover { display: block; max-width: 340px; justify-self: center; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.28); transition: transform .25s ease; }
+.brief-cover:hover { transform: translateY(-3px); }
+.brief-cover img { display: block; width: 100%; height: auto; }
+#download h2 { font-size: var(--step-3); }
