@@ -8,7 +8,7 @@ A multi-page static site for GitHub Pages.
 | --- | --- |
 | index.html | Home |
 | research.html | Research |
-| same-crime-more-prison.html | Research Brief No. 1: Same crime, more prison (Idaho) |
+| same-crime-more-prison.html | Research Brief No. 1: Similar violent crime, far more prison (Idaho) |
 | long-sentences.html | Research Brief No. 2: Long and life sentences in Washington |
 | review-act.html | Research Brief No. 3: Who would benefit from the Review Act |
 | smart-on-crime-washington.html | Research Brief No. 4: Smart on Crime, Smart on the Budget (Washington); full brief: smart-on-crime-washington.pdf |
