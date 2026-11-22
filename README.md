@@ -13,15 +13,17 @@ A multi-page static site for GitHub Pages.
 | review-act.html | Research Brief No. 3: Who would benefit from the Review Act |
 | smart-on-crime-washington.html | Research Brief No. 4: Smart on Crime, Smart on the Budget (Washington); full brief: smart-on-crime-washington.pdf |
 | smart-on-crime-idaho.html | Research Brief No. 5: Smart on Crime, Smart on the Budget: Idaho; full brief: smart-on-crime-idaho.pdf |
+| smart-on-crime-oregon.html | Research Brief No. 6: Smart on Crime, Smart on the Budget: Oregon; full brief: smart-on-crime-oregon.pdf |
 | session.html | 2027 session bill tracker (reads bills.json) |
 | about.html | About |
 | toolkit.html | Advocacy Toolkit |
 | reentry.html | Reentry Help |
+| reentry-idaho.html, reentry-washington.html, reentry-oregon.html | State reentry guides (dated "Last checked") |
 | events.html | Events |
 | donate.html | Donate |
 | contact.html | Contact |
 
-Shared files: `site.css` (all styles), `site.js` (menu, copy buttons, motion), `phoenix.png` and `favicon.png`. All files sit in one folder, with no subfolders. Change a style once in `site.css` and every page picks it up.
+Shared files: `site.css` (all styles), `site.js` (menu, copy buttons, motion), `phoenix.png`, `barnone-logo.png` and `favicon.png`. Each brief has a share image (`og-*.png`); Briefs 4 to 6 also have a PDF and a cover image (`*-cover.png`). All files sit in one folder, with no subfolders. Change a style once in `site.css` and every page picks it up.
 
 ## Editing the menu
 
