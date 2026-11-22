@@ -64,4 +64,6 @@ Briefs share one template in `site.css`: a `brief-head` with eyebrow "Research B
 
 ## Tabled work
 
-The DOC year-end spending brief (formerly No. 4) was taken off the site on Nov. 22, 2026, until the research is finished. Its files are kept on the branch `tabled/brief-4-doc-year-end-spending`. Give it the next open number when it returns.
+The DOC year-end spending brief (formerly No. 4) was taken off the site on Nov. 22, 2026, until the research is finished. Its files now live in the private `barnone-drafts` repository. Give it the next open number when it returns.
+
+Drafts: work on unpublished briefs in the private `barnone-drafts` repository, not on branches here. This repository is public, and every branch in it can be read by anyone.
