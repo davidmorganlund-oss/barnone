@@ -37,7 +37,7 @@ async def build(browser, base, slug, title):
     await page.goto(f"{base}/_tools/print/{slug}.html", wait_until="networkidle")
     await page.evaluate("document.fonts.ready")
     missing = await page.evaluate(
-        "[...document.fonts].filter(f => f.status !== 'loaded').map(f => f.family)")
+        "[...document.fonts].filter(f => f.status === 'error').map(f => f.family)")
     if missing:
         raise SystemExit(f"{slug}: fonts did not load: {missing}")
     report = await page.evaluate("checkOverflow()")

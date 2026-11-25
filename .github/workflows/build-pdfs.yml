@@ -35,6 +35,17 @@ jobs:
       - name: Build anyway for inspection
         if: failure()
         run: python3 _tools/build_print_pdfs.py --force
+      - name: TEMP dump page images to log
+        if: always()
+        run: |
+          pip install -q pymupdf
+          python3 - <<'PY'
+          import fitz, base64, glob
+          for f in sorted(glob.glob("smart-on-crime-*.pdf")):
+              for i, p in enumerate(fitz.open(f)):
+                  b = p.get_pixmap(dpi=90).tobytes("jpg", jpg_quality=80)
+                  print(f"@@IMG {f[15:17]}-{i+1:02d} " + base64.b64encode(b).decode())
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
