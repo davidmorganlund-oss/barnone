@@ -1,0 +1,40 @@
+name: Build print PDFs
+
+# Renders the Washington and Idaho "Smart on Crime, Smart on the Budget" briefs
+# from _tools/print/ and offers the PDFs and cover images as a download.
+# It does not commit anything: download the "print-pdfs" artifact from the run,
+# check it, and commit the files yourself.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "_tools/print/**"
+      - "_tools/build_print_pdfs.py"
+      - ".github/workflows/build-pdfs.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright and pypdf
+        run: |
+          pip install playwright pypdf
+          python -m playwright install --with-deps chromium
+      - name: Build the PDFs
+        run: python3 _tools/build_print_pdfs.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: print-pdfs
+          path: |
+            smart-on-crime-washington.pdf
+            smart-on-crime-idaho.pdf
+            smart-on-crime-washington-cover.png
+            smart-on-crime-idaho-cover.png

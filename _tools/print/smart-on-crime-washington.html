@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Smart on Crime, Smart on the Budget: Washington (BarNone policy brief)</title>
+<link rel="stylesheet" href="print.css">
+<style>
+/* Washington-only pieces */
+h3{font-size:12.8pt;line-height:16pt}
+.wm{font-family:Michroma,sans-serif;font-size:15pt;letter-spacing:.04em;border-bottom:1.5pt solid var(--ink);display:inline-block;padding-bottom:1pt}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border:.75pt solid var(--line);border-radius:7pt;background:var(--tint);margin:12pt 0}
+.strip div{padding:10pt 10pt 9pt;border-left:.75pt solid var(--line)}
+.strip div:first-child{border-left:0}
+.strip .stat{font-size:19.5pt;line-height:24pt;margin-bottom:3pt}
+.strip p{font-family:"Nunito Sans",sans-serif;font-size:9.8pt;line-height:13pt;color:var(--muted);margin:0}
+.lb{background:var(--tint);border-left:3pt solid var(--orange);border-radius:0 7pt 7pt 0;padding:10pt 14pt}
+.lb.r{border-left-color:var(--red)}
+.lb h4{font-size:10.5pt;font-weight:600}
+.lb p{margin:0}
+.five{display:grid;grid-template-columns:24pt 1fr;row-gap:9pt;margin-top:6pt}
+.five .n{font-family:"Nunito Sans",sans-serif;font-weight:800;color:var(--red);font-size:18pt;line-height:20pt}
+.five h4{font-size:12pt;font-weight:600;margin:2pt 0 2pt}
+.five p{color:var(--muted);margin:0}
+.wf{display:grid;grid-template-columns:22pt 168pt 1fr;align-items:center;border-bottom:.75pt solid var(--line);padding:6pt 0}
+.wf .n{font-family:"Nunito Sans",sans-serif;font-weight:800;color:var(--red);font-size:16.5pt}
+.wf h4{font-size:11.2pt;font-weight:600;margin:0 0 1pt;line-height:14pt}
+.wf p{font-size:9.4pt;line-height:12.5pt;color:var(--muted);margin:0}
+.wf .bar{display:flex;align-items:center;font-family:"Nunito Sans",sans-serif;font-weight:700;font-size:11.2pt}
+.wf .bar i{display:block;height:18pt;background:var(--red);border-radius:2pt;margin-right:6pt}
+.say{background:var(--ink);border-radius:7pt;padding:12pt 16pt;margin:12pt 0;color:#fff}
+.say .k{font-family:"Nunito Sans",sans-serif;font-weight:700;font-size:9pt;letter-spacing:.32em;color:#f1e3d8;margin-bottom:7pt}
+.say p{margin:0 0 5pt;font-size:10.5pt;line-height:15.5pt}
+.say p:last-child{margin:0}
+.fac{display:grid;grid-template-columns:150pt 1fr;align-items:center;row-gap:9pt;position:relative;margin-top:10pt}
+.fac span{font-family:"Nunito Sans",sans-serif;font-size:9.8pt}
+.fac .b{display:flex;align-items:center;font-family:"Nunito Sans",sans-serif;font-size:9.8pt}
+.fac .b i{display:block;height:15pt;margin-right:5pt}
+.leg i{display:inline-block;width:8pt;height:8pt;margin:0 4pt -1pt 0}
+.wtable th{font-size:8.2pt;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.wtable tr:nth-child(odd):not(:first-child) td{background:var(--tint)}
+.wtable td.l{font-family:"Nunito Sans",sans-serif;font-weight:700;font-size:10pt;line-height:13.5pt}
+.top{border-top:4pt solid var(--red);border-radius:6pt}
+.top.o{border-top-color:var(--orange)}
+.top ul{margin:4pt 0 0;padding-left:14pt}
+.top li{font-size:9.8pt;line-height:13.5pt;margin-bottom:4pt}
+.person{background:var(--ink);border-radius:7pt;padding:10pt 12pt;color:#fff}
+.person h4{font-size:16.5pt;line-height:20pt;color:#f1e3d8;margin-bottom:3pt}
+.person p{font-size:9.8pt;line-height:13.5pt;margin:0}
+.track{border:.75pt solid var(--line);border-radius:7pt;overflow:hidden;margin:0 0 9pt}
+.track .hd{background:var(--ink);color:#fff;display:flex;align-items:center;padding:7pt 12pt;font-family:"Nunito Sans",sans-serif}
+.track .hd .L{font-size:15pt;font-weight:800;margin-right:9pt}
+.track .hd .t{font-size:11.2pt;font-weight:700}
+.track .hd .g{margin-left:auto;font-size:9pt;color:#f1e3d8}
+.track ul{margin:0;padding:7pt 14pt 6pt 28pt}
+.track li{font-size:9.8pt;line-height:13.5pt;margin-bottom:4pt}
+.sb{font-family:"Bitter",serif;font-weight:700}
+.ntab td{text-align:right}
+.ntab td:first-child{text-align:left}
+.ntab th{text-align:right}
+.ntab th:first-child{text-align:left}
+.ntab tr.net td{background:var(--ink) !important;color:#fff;font-family:"Nunito Sans",sans-serif;font-weight:700}
+.ntab tr.net td.big{font-size:12pt}
+.clem .nums{display:grid;grid-template-columns:repeat(4,1fr);margin-top:2pt}
+.clem .nums div{font-family:"Nunito Sans",sans-serif;color:#f1e3d8;font-size:9.4pt;line-height:12.5pt}
+.clem .nums b{display:block;font-size:27pt;line-height:32pt;color:#fff;font-weight:800}
+.clem .gb{display:grid;grid-template-columns:86pt 1fr 40pt;align-items:center;margin-top:8pt;font-family:"Nunito Sans",sans-serif;font-size:9.8pt;color:#f1e3d8}
+.clem .gb .tr{height:12pt;background:#3a3a40;border-radius:2pt}
+.clem .gb .tr i{display:block;height:12pt;border-radius:2pt}
+.clem .gb b{text-align:right;color:#fff;font-size:12pt}
+.wi{border:.75pt solid var(--line);border-left:3pt solid var(--red);border-radius:0 7pt 7pt 0;padding:9pt 14pt 8pt;margin:0 0 9pt}
+.wi h4{font-size:12pt;line-height:15pt;margin-bottom:4pt}
+.wi p{font-size:9.8pt;line-height:14.5pt;margin:0 0 3pt}
+.wi p:last-child{margin:0}
+.wi .k{font-family:"Nunito Sans",sans-serif;font-weight:600;color:var(--red)}
+.wi .k2{font-family:"Nunito Sans",sans-serif;font-weight:600;color:var(--dred)}
+.srclist{border-top:0;margin-top:4pt}
+.srclist div{display:grid;grid-template-columns:22pt 1fr;border-bottom:.75pt solid var(--line);padding:6pt 0 5pt}
+.srclist .n{font-family:"Nunito Sans",sans-serif;font-weight:700;color:var(--red);font-size:9.4pt}
+.srclist p{font-size:9.4pt;line-height:12.5pt;margin:0}
+.srclist .u{font-family:"Nunito Sans",sans-serif;font-size:9pt;color:var(--foot);margin-top:2pt}
+</style>
+</head>
+<body data-footer="BarNone · Smart on Crime, Smart on the Budget · Discussion draft">
+
+<!-- 1 · Cover -->
+<section class="page cover">
+  <div class="art">
+    <div class="bars" style="top:0;left:297pt"><i></i><i></i><i></i><i></i></div>
+    <div style="position:absolute;left:297pt;top:506pt;width:400pt;height:400pt;border-radius:200pt 0 0 0;background:#f4e1d0"></div>
+    <div style="position:absolute;left:427pt;top:567pt;width:112pt;height:112pt;border-radius:50%;background:var(--orange)"></div>
+    <div class="bars" style="bottom:0;left:54pt"><i></i><i></i><i></i><i></i></div>
+  </div>
+  <div class="inner">
+    <img src="../../barnone-logo.png" alt="" style="position:absolute;left:0;top:52pt;width:128pt">
+    <div style="position:absolute;left:14pt;top:146pt"><span class="wm">BARNONE</span></div>
+    <div class="ck" style="position:absolute;top:176pt;font-size:9pt;letter-spacing:.35em">barnoneinc.org</div>
+    <div class="ck" style="position:absolute;top:247pt">Policy brief · 2027 legislative session</div>
+    <h1 class="title" style="position:absolute;top:272pt;font-size:49.5pt;line-height:51pt">Smart on<br>Crime, Smart<br>on the Budget</h1>
+    <p style="position:absolute;top:448pt;width:410pt;font-size:15.8pt;line-height:23pt;color:var(--muted)">A discussion draft on lowering corrections spending by lining up sentence review, reentry and prison operations, and showing what that could actually save.</p>
+    <div class="cf"><span>BarNone · November 2026</span><span>Discussion draft</span></div>
+  </div>
+</section>
+
+<!-- 2 · The ask -->
+<section class="page">
+  <div class="kicker">01 · The ask</div>
+  <h1>Put corrections dollars<br>where they do the most good</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>The governor projects a shortfall of about $4 billion in the first year of the next budget, and the Department of Corrections spends about $1.7 billion a year. There's room to spend that money better: supervising more people in lower-cost settings, giving people who have served long sentences a real review, and closing the units that empty out.</p>
+  <p>A graduated reentry slot costs a fraction of a prison bed. A commutation for someone serving life avoids decades of cost. Together with elder parole and unit closures, our preliminary estimate is about <b>$70 million a year</b>, or about $142 million a biennium, at an accelerated pace.</p>
+  <div class="strip">
+    <div><div class="stat">$86,261</div><p>Average cost of a prison bed per year, FY2026 (DOC)</p></div>
+    <div><div class="stat">~600</div><p>People in graduated reentry, mid-2026 (DOC)</p></div>
+    <div><div class="stat">$142M</div><p>Accelerated estimate per biennium (preliminary)</p></div>
+    <div><div class="stat">0 of 15</div><p>Board-recommended commutations granted since 2025</p></div>
+  </div>
+  <div class="lb"><h4>Age opens the door to review. It doesn't decide the outcome.</h4><p>Each pathway has its own rules and safeguards (page 5).</p></div>
+  <h3>Five pieces</h3>
+  <div class="five">
+    <span class="n">1</span><div><h4>Grow graduated reentry</h4><p>Supervise more low-risk people in the community, at a fraction of the cost. About 600 are in it now; full scale adds 2,000 more.</p></div>
+    <span class="n">2</span><div><h4>Commute at Inslee's scale</h4><p>The governor follows his own board and publishes criteria for older and medically fragile people. Inslee commuted 422 during the 2020 COVID emergency.</p></div>
+    <span class="n">3</span><div><h4>Pass elder parole</h4><p>Give people 50 and older who have served 20 years a hearing before the review board.</p></div>
+    <span class="n">4</span><div><h4>Make earned release retroactive</h4><p>Higher earned release rates should reach people already inside, not just future offenses.</p></div>
+    <span class="n">5</span><div><h4>Close units as they empty</h4><p>Re-close the Reformatory unit reopened in 2026 and close Monroe's solitary unit, moving people with serious mental illness to Sky River's treatment beds.</p></div>
+  </div>
+</section>
+
+<!-- 3 · The picture -->
+<section class="page">
+  <div class="kicker">02 · The picture</div>
+  <h1>Four moves, about $250 million a biennium</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>Each step shifts people to lower-cost supervision or resolves a sentence through review. As units empty, they close, and the savings stack up.</p>
+  <div class="wf"><span class="n">1</span><div><h4>Grow graduated reentry</h4><p>2,000 more people supervised in the community</p></div><div class="bar"><i style="width:121pt"></i>+$126M</div></div>
+  <div class="wf"><span class="n">2</span><div><h4>Make earned release retroactive</h4><p>About 900 fewer people inside at any time</p></div><div class="bar"><i style="margin-left:121pt;width:73pt"></i>+$76M</div></div>
+  <div class="wf"><span class="n">3</span><div><h4>Commute at Inslee's scale</h4><p>About 400 commutations for older, long-serving people</p></div><div class="bar"><i style="margin-left:194pt;width:26pt"></i>+$27M</div></div>
+  <div class="wf"><span class="n">4</span><div><h4>Pass elder parole</h4><p>About 400 releases through review board hearings</p></div><div class="bar"><i style="margin-left:220pt;width:26pt"></i>+$27M</div></div>
+  <div class="wf" style="border-bottom:0"><span></span><h4 style="font-size:12pt">Savings per biennium</h4><div class="bar" style="color:var(--red);font-size:13.5pt"><i style="width:246pt;background:var(--ink)"></i>$255M</div></div>
+  <p class="src" style="font-size:8.6pt;line-height:11.5pt;color:var(--foot)">Full-scale BarNone estimates, net of reentry, supervision and Medicaid costs, once running. At an accelerated pace: about $142 million. Figures are rounded separately. Lower populations also let the state re-close the Reformatory unit reopened in 2026.</p>
+  <div class="say">
+    <div class="k">WHAT A LEGISLATOR CAN SAY</div>
+    <p>“We had a $4 billion hole and hard choices to make. We chose to stop paying $86,000 a year to hold people our own review processes say can go home.”</p>
+    <p>“We protected schools and health care by closing prison units we no longer need.”</p>
+    <p>“Every release went through a defined process, with supervision and reentry funded.”</p>
+  </div>
+  <h3 style="margin-top:8pt">Everyone gets something they need</h3>
+  <div class="grid g2">
+    <div class="lb"><h4>Budget writers</h4><p class="sm">Real, recurring savings in a crisis year, tied to units that actually close.</p></div>
+    <div class="lb"><h4>Advocates</h4><p class="sm">Commutations, elder parole, retroactive earned release and more reentry.</p></div>
+    <div class="lb"><h4>Legislators</h4><p class="sm">A responsible budget choice with public safety safeguards built in.</p></div>
+    <div class="lb"><h4>Corrections staff</h4><p class="sm">Transfers, retraining and priority hiring before any unit closes.</p></div>
+  </div>
+</section>
+
+<!-- 4 · What prison costs us -->
+<section class="page">
+  <div class="kicker">03 · What prison costs us</div>
+  <h1>Published costs vary widely from prison to prison</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p style="font-size:11.5pt;line-height:18pt">DOC's latest figure is $86,261 per person per year (FY2026 draft, 200-RE019 rev. Oct. 2026; includes facility health care, excludes administrative and Reentry Division costs). DOC's report groups prisons as older or newer: the older group, which also includes minimum camps, averages $100,200 and the newer group $67,917.</p>
+  <div class="card" style="padding:12pt 14pt 10pt;margin-top:12pt">
+    <h4 style="font-size:11.2pt;font-weight:600;margin-bottom:2pt">Cost per person, per year, by prison</h4>
+    <div class="leg sans" style="font-size:9pt;color:var(--muted)"><i style="background:var(--red)"></i>Older facilities &nbsp;&nbsp; <i style="background:var(--gray)"></i>Newer facilities</div>
+    <div class="fac">
+      <div style="position:absolute;left:calc(150pt + 152.5pt);top:-6pt;bottom:-6pt;border-left:1pt dashed var(--ink)"></div>
+      <span>Monroe Correctional Complex</span><div class="b"><i style="width:245.6pt;background:var(--red)"></i>$138,937</div>
+      <span>Corrections Center for Women</span><div class="b"><i style="width:214.2pt;background:var(--red)"></i>$121,185</div>
+      <span>Clallam Bay</span><div class="b"><i style="width:174.5pt;background:var(--red)"></i>$98,718</div>
+      <span>State Penitentiary, Walla Walla</span><div class="b"><i style="width:163.4pt;background:var(--red)"></i>$92,428</div>
+      <span>Corrections Center, Shelton</span><div class="b"><i style="width:144.3pt;background:var(--red)"></i>$81,650</div>
+      <span>Airway Heights</span><div class="b"><i style="width:130.5pt;background:var(--gray)"></i>$73,808</div>
+      <span>Coyote Ridge</span><div class="b"><i style="width:118.5pt;background:var(--gray)"></i>$67,016</div>
+      <span>Stafford Creek</span><div class="b"><i style="width:111.4pt;background:var(--gray)"></i>$63,044</div>
+    </div>
+    <div class="sans" style="padding-left:calc(150pt + 152.5pt - 50pt);font-size:9pt;color:var(--muted);margin-top:8pt">System average $86,261</div>
+    <p class="src" style="font-size:8.6pt;line-height:11.5pt;color:var(--foot)">Source: DOC, cost per incarcerated individual by facility (200-RE019). Includes facility health care. Differences also reflect custody level, health care needs and who each prison serves, not just building age, so unit-level analysis should set closure priorities.</p>
+  </div>
+  <h3 style="font-size:13.5pt">What we get back</h3>
+  <div class="grid g3">
+    <div class="card t"><h4 style="font-size:10.5pt;font-weight:600">Long sentences deter little</h4><p style="font-size:10.5pt;line-height:15.5pt">Deterrence comes mostly from the chance of getting caught, not from how long the sentence is.</p></div>
+    <div class="card t"><h4 style="font-size:10.5pt;font-weight:600">Risk drops with age</h4><p style="font-size:10.5pt;line-height:15.5pt">Crime falls steeply as people get older, which is why long-serving older people deserve a structured chance at review.</p></div>
+    <div class="card t"><h4 style="font-size:10.5pt;font-weight:600">The oldest cost the most</h4><p style="font-size:10.5pt;line-height:15.5pt">About 23% of people in state prisons are over 50 (DOC, March 2026), and their health care drives costs up.</p></div>
+  </div>
+</section>
+
+<!-- 5 · Who's in scope -->
+<section class="page">
+  <div class="kicker">04 · Who's in scope</div>
+  <h1>Give people who've served long sentences<br>a real chance to show they're ready</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>This plan is for people who have served long sentences, especially older people and people with serious medical needs. It gives them a structured chance to show that keeping them locked up is no longer needed for public safety.</p>
+  <div class="grid g2">
+    <div class="card top"><h4 style="font-size:12pt;font-weight:600">Who could qualify</h4>
+      <ul>
+        <li>People 50 and older who have served 20 years (elder parole)</li>
+        <li>People with serious medical needs or at the end of life</li>
+        <li>People under 18 at the offense, through the review board's existing petitions (under 21 if a bill like HB 1317 passes)</li>
+        <li>People nearing release who are assessed low risk (graduated reentry)</li>
+      </ul></div>
+    <div class="card top o"><h4 style="font-size:12pt;font-weight:600">Who stays</h4>
+      <ul>
+        <li>Anyone the board finds likely to commit new crimes despite release conditions</li>
+        <li>People who don't meet a pathway's eligibility rules</li>
+      </ul>
+      <p style="font-size:9.8pt;line-height:13.5pt;color:var(--muted);margin-top:4pt">Prison is still needed for some people.</p></div>
+  </div>
+  <h3>Each pathway has its own safeguards</h3>
+  <table class="wtable">
+    <tr><th style="width:24%">Pathway</th><th style="width:24%">Who decides</th><th>Safeguards</th></tr>
+    <tr><td class="l">Elder parole (proposed)</td><td>Indeterminate Sentence Review Board</td><td>Individual hearing, risk assessment, victim notice and participation, release conditions. Modeled on the board's juvenile process.</td></tr>
+    <tr><td class="l">Earned release</td><td>DOC, under statute</td><td>Credits earned through conduct and programming; the highest rates are limited by offense and risk classification. Community supervision after release.</td></tr>
+    <tr><td class="l">Graduated reentry</td><td>DOC</td><td>Risk assessment, electronic monitoring or reentry center, possible return to prison for violations.</td></tr>
+    <tr><td class="l">Clemency</td><td>Governor, on the board's advice</td><td>Public hearing before the Clemency and Pardons Board, victims heard, governor makes the final call.</td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:10pt">
+    <div class="person"><h4>Harry Alexander, 68</h4><p>Three-strikes life sentence; has had a stroke, with heart, kidney and diabetes problems. The board recommended commutation 4 to 1. The governor denied it.</p></div>
+    <div class="person"><h4>Carlton Rudolph, 68</h4><p>Also a three-strikes life sentence. The board recommended commutation 5 to 0. His case is still waiting on the governor.</p></div>
+  </div>
+</section>
+
+<!-- 6 · The package -->
+<section class="page">
+  <div class="kicker">05 · The package</div>
+  <h1>Three tracks: an operating plan, a<br>bill package and executive action</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>The package runs on three tracks. They reinforce each other, but each can move on its own, and the savings depend on which ones pass.</p>
+  <div class="track">
+    <div class="hd"><span class="L">A</span><span class="t">Near-term operating plan</span><span class="g">Budget provisos · 2027–29</span></div>
+    <ul>
+      <li><span class="sb">Unit closure plan.</span> DOC names closure candidates with a plan for custody, receiving capacity, health care, staffing and one-time costs. Appropriations drop as units close.</li>
+      <li><span class="sb">Graduated reentry at scale.</span> Funds 1,500 or more added graduated reentry slots, a lower-cost supervision option, along with housing vouchers and Medicaid enrollment at release, plus transfers, retraining and priority hiring for affected DOC staff.</li>
+    </ul>
+  </div>
+  <div class="track">
+    <div class="hd"><span class="L">B</span><span class="t">Statutory package</span><span class="g">Bills · 2027 session</span></div>
+    <ul>
+      <li><span class="sb">Elder parole (proposed).</span> Hearings before the review board for people 50 and older who have served 20 years; life-without-parole cases after 25 years. Builds on HB 1866 (2017–18).</li>
+      <li><span class="sb">Earned release, retroactive.</span> A higher earned release rate that reaches people already inside. HB 1239 (2026) stalled, and its substitute covered only future offenses.</li>
+      <li><span class="sb">Concurrent enhancements.</span> Lets judges run firearm and deadly weapon enhancements at the same time. Builds on HB 1178.</li>
+    </ul>
+  </div>
+  <div class="track">
+    <div class="hd"><span class="L">C</span><span class="t">Executive action</span><span class="g">Governor · now</span></div>
+    <ul>
+      <li>Commute at Inslee's scale: act on the four pending commutations, fund and fill the five new board seats from HB 1131 (2025), and publish criteria so older and medically fragile people get heard in batches. Medical placement can grow too (SB 5895, 2026).</li>
+    </ul>
+  </div>
+  <h3>How the pieces depend on each other</h3>
+  <table class="wtable">
+    <tr><th style="width:41%">If this happens</th><th>Then</th></tr>
+    <tr><td class="l">Graduated reentry and commutations scale up in 2027</td><td>The fastest savings. Units empty and Track A can close them inside 2027–29.</td></tr>
+    <tr><td class="l">The bills fail or narrow</td><td>Track A shrinks to what the current forecast allows. Savings fall toward the conservative scenario.</td></tr>
+    <tr><td class="l">The governor won't move on clemency</td><td>Lose one of the fastest levers. The budget makes the case for acting now.</td></tr>
+  </table>
+</section>
+
+<!-- 7 · The numbers -->
+<section class="page">
+  <div class="kicker">06 · The numbers</div>
+  <h1>At an accelerated pace, about $70 million a year</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p style="margin-bottom:4pt">Preliminary BarNone estimates. The scale is the choice.</p>
+  <table class="wtable ntab">
+    <tr><th style="width:44%"></th><th>Today's pace</th><th>Accelerated</th><th>Full scale</th></tr>
+    <tr><td class="l">Graduated reentry, added slots</td><td>600</td><td>1,500</td><td>2,000</td></tr>
+    <tr><td class="l">Commutations</td><td>100</td><td>300</td><td>400</td></tr>
+    <tr><td class="l">Elder parole releases</td><td>0</td><td>200</td><td>400</td></tr>
+    <tr><td class="l">Earned release (retroactive)</td><td>200</td><td>500</td><td>900</td></tr>
+    <tr><td class="l">Prison beds freed / closed</td><td>900 / 540</td><td>2,500 / 2,125</td><td>3,700 / 3,700</td></tr>
+    <tr><td class="l">Avoided prison cost</td><td>$27M</td><td>$98M</td><td>$166M</td></tr>
+    <tr><td class="l">Cost of reentry slots, housing, supervision, Medicaid</td><td>−$10M</td><td>−$28M</td><td>−$39M</td></tr>
+    <tr class="net"><td>Net general fund, per year</td><td>$17M</td><td class="big">$71M</td><td>$128M</td></tr>
+    <tr><td class="l">Per biennium, once running</td><td>$34M</td><td>$142M</td><td>$255M</td></tr>
+  </table>
+  <p style="font-size:8.6pt;line-height:12pt;color:var(--muted);margin:6pt 0 10pt"><b>How we count.</b> People out of prison at any one time once running (average daily population), not one-time releases. Inputs: $45,000 saved per closed bed; $7,424 per bed that stays open; costs of $13,500 per reentry slot, $11,500 per commutation or parole release, $3,000 per earned release. Rounded separately.</p>
+  <div class="grid g2" style="column-gap:20pt;row-gap:6pt;font-size:9.8pt;line-height:14.5pt">
+    <p style="margin:0"><b>Graduated reentry is a cost swap.</b> Each move trades a prison bed for a slot costing about $13,500. Once units close, each one nets roughly $30,000 a year.</p>
+    <p style="margin:0"><b>Commutations avoid future cost.</b> A commuted life sentence avoids decades of prison cost, often $1 million to $2 million, partly offset by reentry and supervision.</p>
+    <p style="margin:0"><b>Scale empties units.</b> At 2,000 or more moves, whole units empty and can close. Savings per closed bed: about $45,000, below the $86,261 average because headquarters costs stay.</p>
+    <p style="margin:0"><b>Small moves don't.</b> A bed that stays open saves only about $7,424 a year, DOC's marginal cost in recent fiscal notes.</p>
+  </div>
+  <div class="grid g2" style="margin-top:12pt">
+    <div class="lb r"><h4>Possible avoided capital</h4><p class="sm">If the Reformatory, its hospital and the solitary unit all leave the walled site, the $34.5M wall renovation and about $11M in other work could be dropped. Not counted above.</p></div>
+    <div class="lb"><h4>Timing</h4><p class="sm">The population has held flat at about 13,900 to 14,000. Commutations and graduated reentry can move inside 2027–29; elder parole takes longer.</p></div>
+  </div>
+</section>
+
+<!-- 8 · Making the savings real -->
+<section class="page">
+  <div class="kicker">07 · Making the savings real</div>
+  <h1>Tie population cuts to real<br>closures, and fund the transition</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="grid g2" style="column-gap:20pt;row-gap:12pt">
+    <div><h4 style="font-size:11.2pt;font-weight:600">Tie closures to appropriations</h4><p class="sm" style="margin:0">When Larch closed in 2023, DOC used the savings to open units elsewhere. Savings reach the general fund only when the budget cuts the matching appropriation.</p></div>
+    <div><h4 style="font-size:11.2pt;font-weight:600">Let unit-level analysis pick the units</h4><p class="sm" style="margin:0">Facility averages mix custody level, health care and the people each prison serves. Closing one unit doesn't remove a prison's shared costs. DOC should cost each candidate unit.</p></div>
+    <div><h4 style="font-size:11.2pt;font-weight:600">Fund reentry before release</h4><p class="sm" style="margin:0">Housing, supervision and Medicaid enrollment at release. People who leave with nowhere to live are the likeliest to fail.</p></div>
+    <div><h4 style="font-size:11.2pt;font-weight:600">Take care of the workers</h4><p class="sm" style="margin:0">Many of these are union jobs. Plan transfers, retraining and priority hiring for other state jobs. Most Larch staff found work at other prisons or agencies.</p></div>
+  </div>
+  <div class="dark clem" style="margin-top:22pt;padding:16pt 18pt">
+    <div class="sans" style="font-weight:700;font-size:9pt;letter-spacing:.32em;color:#f1e3d8">CLEMENCY: THE FASTEST LEVER WE'RE NOT USING</div>
+    <div class="nums">
+      <div><b>15</b>Commutations the board recommended since Jan. 2025</div>
+      <div><b style="text-decoration:underline;text-underline-offset:3pt">0</b>Granted</div>
+      <div><b>11</b>Denied</div>
+      <div><b>4</b>Pending, as of Sept. 2026</div>
+    </div>
+    <div class="gb" style="margin-top:14pt"><span>Gov. Ferguson</span><div class="tr"><i style="width:27%;background:#fff"></i></div><b>27%</b></div>
+    <div class="gb"><span>Gov. Inslee</span><div class="tr"><i style="width:94%;background:var(--orange)"></i></div><b>94%</b></div>
+    <p style="font-size:9.8pt;line-height:14.5pt;color:#fff;margin-top:12pt">The bars count all favorable board recommendations, pardons and commutations together. Gov. Ferguson granted 13 of 48, all of them pardons, so his rate on commutations alone is 0 of 15 (Seattle Times analysis, Oct. 2026). The 27% counts pending cases as not followed. Each commuted life sentence avoids decades of cost, often $1 million to $2 million per person. Inslee commuted 422 during the 2020 COVID emergency, so large-scale clemency is doable. Fund and fill the five new board seats (about $600,000 a year), publish criteria for older and medically fragile people, and commutations become one of the fastest ways to cut prison costs in 2027–29.</p>
+  </div>
+</section>
+
+<!-- 9 · Objections and answers -->
+<section class="page">
+  <div class="kicker">08 · Objections and answers</div>
+  <h1>What we'll hear, and how we'll answer</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <table class="wtable">
+    <tr><th style="width:34%">Objection</th><th>Answer</th></tr>
+    <tr><td class="l">"This puts dangerous people on the street."</td><td>Nobody is released just for being older. Elder parole and clemency need an individual hearing; earned release and graduated reentry use DOC risk tools, supervision and possible return to prison for violations. Page 5 lays out each pathway.</td></tr>
+    <tr><td class="l">"Victims deserve to see the sentence served."</td><td>Victims get notice, can take part in hearings and can ask for release conditions. Their input shapes the decision. The review asks whether more years in prison still serve public safety.</td></tr>
+    <tr><td class="l">"Closing prisons kills rural jobs."</td><td>Unit-level analysis comes first, and the plan funds transfers, retraining and priority hiring. Most Larch staff found new jobs.</td></tr>
+    <tr><td class="l">"Releasing people doesn't really save money."</td><td>Right, unless units close. That's why appropriations drop only as units close, and why we show the marginal cost next to the average.</td></tr>
+    <tr><td class="l">"It's soft on crime."</td><td>It's smart on crime. Research finds the chance of getting caught deters far more than sentence length. The plan spends part of the savings on reentry.</td></tr>
+    <tr><td class="l">"Wait for a better budget year."</td><td>The population over 55 keeps growing, and so does the cost per person. Waiting makes this more expensive.</td></tr>
+  </table>
+  <h3>One set of facts, different emphasis</h3>
+  <div class="grid g2">
+    <div class="lb"><h4>Budget writers</h4><p class="sm">A phased plan that saves money only as units close, with average and marginal cost side by side.</p></div>
+    <div class="lb"><h4>Swing legislators</h4><p class="sm">Smart on crime: defined eligibility, individual review where it counts, and supervision after release.</p></div>
+    <div class="lb"><h4>Victims and advocates</h4><p class="sm">Notice, participation and conditions stay. Their input shapes each decision.</p></div>
+    <div class="lb"><h4>Corrections staff</h4><p class="sm">A transition plan before any closure: transfers, retraining and priority hiring.</p></div>
+  </div>
+</section>
+
+<!-- 10 · What if (1) -->
+<section class="page">
+  <div class="kicker">09 · What if</div>
+  <h1>Planning for the hard cases:<br>people, safety and savings</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>Every reform has a failure case. These are the ones legislators will ask about, with what the record shows and how the plan handles each.</p>
+  <div class="wi"><h4>What if someone who gets out commits a new crime?</h4>
+    <p><span class="k">What we know:</span> In DOC's study of people released in 1998 and 2008, 4% to 5% of those 55 and older returned on a new crime within three years, versus about 22% of younger people. Of 73 people released through the board's juvenile process, followed six months to 11 years, one was convicted of a new felony (nonviolent eluding).</p>
+    <p><span class="k2">Our answer:</span> Eligibility tiered by age, time served and risk assessment; release conditions and supervision; outcomes published every year.</p></div>
+  <div class="wi"><h4>What if graduated reentry participants fail?</h4>
+    <p><span class="k">What we know:</span> Of 5,733 participants as of July 2026, 60% completed, 21% were terminated and 3.4% were counted as escapes.</p>
+    <p><span class="k2">Our answer:</span> Violations can mean a return to prison. Fund rental vouchers and supervision, keep the substance use evaluation required since 2025, and report why people are terminated.</p></div>
+  <div class="wi"><h4>What about victims and survivors?</h4>
+    <p><span class="k">What we know:</span> Victims already get notice and a voice in review board and clemency hearings.</p>
+    <p><span class="k2">Our answer:</span> Notice and input at every release decision, release conditions victims can request, and part of the savings for the Office of Crime Victims Advocacy and survivor services.</p></div>
+  <div class="wi"><h4>Where will people live and get health care?</h4>
+    <p><span class="k">What we know:</span> About 94% to 95% of people leaving DOC qualify for Medicaid. Washington's reentry waiver covers some services up to 90 days before release, launched July 2026. Graduated reentry can provide up to six months of rental vouchers.</p>
+    <p><span class="k2">Our answer:</span> Pair every release pathway with housing funding and Medicaid enrollment, and count the federal match as an offset to DOC's medical costs.</p></div>
+  <div class="wi"><h4>What if the savings never show up in the budget?</h4>
+    <p><span class="k">What we know:</span> DOC's budget grew while the prison population fell, and the Larch savings went to new units elsewhere.</p>
+    <p><span class="k2">Our answer:</span> A budget proviso that cuts appropriations as units close, with quarterly reports to the fiscal committees.</p></div>
+</section>
+
+<!-- 11 · What if (2) -->
+<section class="page">
+  <div class="kicker">10 · What if</div>
+  <h1>Planning for the hard cases:<br>operations, labor and the law</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>The second set of questions is about operations, labor and the law. Each has a workable answer if it's built in from the start.</p>
+  <div class="wi"><h4>What if the prison population goes up?</h4>
+    <p><span class="k">What we know:</span> The population has held flat at about 13,900 to 14,000, and the 2026 budget reopened a Reformatory unit at Monroe for 158 close-custody beds. The tight spot is custody level, not total beds.</p>
+    <p><span class="k2">Our answer:</span> Warm closures with reopening triggers, for example occupancy above 95% of operational capacity for two quarters. Close by custody level, not just bed count.</p></div>
+  <div class="wi"><h4>What about staffing and overtime?</h4>
+    <p><span class="k">What we know:</span> DOC custody staff worked more than 1.2 million overtime hours in FY2023, averaging about 23 hours of mandatory overtime a month.</p>
+    <p><span class="k2">Our answer:</span> Closures redeploy staff to cut mandatory overtime. This is about fewer forced double shifts, not layoffs.</p></div>
+  <div class="wi"><h4>What about the unions and the law?</h4>
+    <p><span class="k">What we know:</span> Teamsters Local 117 sued over the Larch closure; the court let DOC proceed in 2023, but the duty to bargain over effects remains. Clemency is the governor's constitutional power.</p>
+    <p><span class="k2">Our answer:</span> Effects bargaining with Teamsters 117 and WFSE, transfer rights and lead time. The Legislature funds and requests clemency capacity; counsel reviews any closure proviso.</p></div>
+  <div class="wi"><h4>Do closed prisons still cost money?</h4>
+    <p><span class="k">What we know:</span> Yes. Larch kept about 10 staff on site after closing. McNeil Island needed $2 million in emergency power repairs in 2025. Monroe's wall secures the Reformatory, its hospital and the solitary unit, so the wall project goes away only if all three move.</p>
+    <p><span class="k2">Our answer:</span> Score savings after carrying costs. DOC has pledged to keep people with serious mental illness out of solitary; Sky River's treatment beds are on the same campus.</p></div>
+  <div class="wi"><h4>Can the system handle the workload?</h4>
+    <p><span class="k">What we know:</span> Retroactive earned release means recalculating sentences. Elder parole needs review board hearings. Resentencing needs court time.</p>
+    <p><span class="k2">Our answer:</span> Phase it in and fund DOC records staff, board hearing capacity and court time up front.</p></div>
+</section>
+
+<!-- 12 · Sources -->
+<section class="page">
+  <div class="kicker">11 · Sources</div>
+  <h1>Sources</h1>
+  <div class="rule"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="srclist">
+    <div><span class="n">1</span><div><p>DOC, Cost per Incarcerated Individual by Facility (200-RE019), FY2026 draft (R. 10/2026; printed Oct. 13, 2026)</p><p class="u">doc.wa.gov/sites/default/files/2025-11/200-RE019.pdf</p></div></div>
+    <div><span class="n">2</span><div><p>DOC Agency Fact Cards (100-RE005), March and June 2026</p><p class="u">doc.wa.gov/sites/default/files/2026-07/100-RE005.pdf</p></div></div>
+    <div><span class="n">3</span><div><p>OFM, Department of Corrections operating budget, 2025–27, and 2026 supplemental (Monroe close-custody beds)</p><p class="u">ofm.wa.gov/budget/state-budget-2025-27</p></div></div>
+    <div><span class="n">4</span><div><p>OFM capital plan, Washington State Reformatory perimeter wall (project 30000117)</p><p class="u">ofm.wa.gov/budget/state-budget-2025-27</p></div></div>
+    <div><span class="n">5</span><div><p>OFM fiscal notes, DOC direct variable cost of $7,424 per person (HB 1982, 2ESSB 5360)</p><p class="u">fnspublic.ofm.wa.gov</p></div></div>
+    <div><span class="n">6</span><div><p>Caseload Forecast Council, prison population forecast, Nov. 2026</p><p class="u">cfc.wa.gov</p></div></div>
+    <div><span class="n">7</span><div><p>Governor Ferguson, statement on the November 2026 revenue forecast</p><p class="u">governor.wa.gov</p></div></div>
+    <div><span class="n">8</span><div><p>Clemency and Pardons Board status table, Sept. 25, 2026</p><p class="u">governor.wa.gov</p></div></div>
+    <div><span class="n">9</span><div><p>Seattle Times / Spokesman-Review on clemency follow rates, Oct. 18, 2026</p><p class="u">spokesman.com</p></div></div>
+    <div><span class="n">10</span><div><p>Washington State Standard / InvestigateWest on clemency, Oct. 3, 2026</p><p class="u">washingtonstatestandard.com</p></div></div>
+    <div><span class="n">11</span><div><p>DOC, Best Bed project and the Larch closure</p><p class="u">doc.wa.gov/news/2023/news-spotlight-best-bed-project</p></div></div>
+    <div><span class="n">12</span><div><p>DOC fact sheets on Monroe (400-GU033) and graduated reentry (400-GU009); DOC aging population study (200-RE003; 1998 and 2008 release cohorts); UW Jackson School review board report, 2026</p><p class="u">doc.wa.gov · jsis.washington.edu</p></div></div>
+    <div><span class="n">13</span><div><p>RCW 9.94A.730, early release petitions to the review board</p><p class="u">app.leg.wa.gov/rcw</p></div></div>
+    <div><span class="n">14</span><div><p>Bills: HB 1866 (2017–18), HB 1239 and SB 5895 (2026), HB 1131 (2025), HB 1178</p><p class="u">app.leg.wa.gov/billsummary</p></div></div>
+  </div>
+  <p style="font-size:9.4pt;line-height:13pt;color:var(--muted);margin:10pt 0 0">All savings figures are preliminary BarNone estimates built from DOC's published costs, not official fiscal estimates.</p>
+  <div class="dark" style="display:flex;align-items:center;justify-content:space-between;padding:12pt 18pt">
+    <div style="text-align:center"><img src="../../barnone-logo.png" alt="" style="width:62pt;display:block;margin:0 auto 2pt"><span class="wm" style="font-size:7.5pt;color:#fff;border-bottom-color:#fff">BARNONE</span></div>
+    <div style="text-align:right"><div class="sans" style="font-weight:700;font-size:12pt;color:#fff">barnoneinc.org</div><div class="sans" style="font-size:10.5pt;color:#f1e3d8">admin@barnoneinc.org</div></div>
+  </div>
+</section>
+
+<script src="print.js"></script>
+</body>
+</html>
