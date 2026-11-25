@@ -40,6 +40,17 @@ Links between pages use plain file names (`research.html`), so the site also wor
 
 Briefs share one template in `site.css`: a `brief-head` with eyebrow "Research Brief No. N · State", key findings, numbered figures, a "Read with care" section, sources and a suggested citation. Add each new brief to the list on `research.html` and, if it is the newest, to the feature on `index.html`.
 
+## Brief PDFs
+
+The PDFs come from two scripts in `_tools/` (Jekyll doesn't publish that folder).
+
+- **Briefs 1, 2, 3 and 6:** `python3 _tools/build_brief_pdfs.py` prints each brief's own web page to PDF.
+- **Briefs 4 and 5 (Washington and Idaho):** these are designed booklets, so each has its own print source in `_tools/print/`: `smart-on-crime-washington.html` and `smart-on-crime-idaho.html`, sharing `print.css` and `print.js`. Each `<section class="page">` is one letter-size page. Edit the text there, then run `python3 _tools/build_print_pdfs.py`. It stops if any page's text runs into the footer, and it rewrites the PDF and its `-cover.png`. Keep the page count a multiple of 4 so the briefs still print as ledger booklets.
+
+No Chrome on hand? Pushing a change under `_tools/print/` runs the "Build print PDFs" GitHub Action, which checks every page and offers the PDFs as a download (`print-pdfs`). To have it commit the rebuilt PDFs and covers for you, start it from the Actions tab on your branch with "Commit the rebuilt files" ticked. When a PDF's size changes, update the size shown next to its download link on the brief's page.
+
+The print fonts in `_tools/print/fonts/` (Bitter, Nunito Sans and Michroma) are under the SIL Open Font License; see `OFL.txt` there.
+
 ## Session tracker data
 
 `session.html` reads `bills.json` from this folder. Until it has bills, the page shows a "tracking opens with the session" note. Expected format:

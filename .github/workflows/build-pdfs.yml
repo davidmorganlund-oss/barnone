@@ -1,0 +1,61 @@
+name: Build print PDFs
+
+# Renders the Washington and Idaho "Smart on Crime, Smart on the Budget" briefs
+# from _tools/print/. Every run offers the PDFs and cover images as a download
+# (the "print-pdfs" artifact). Run it by hand from the Actions tab with
+# "Commit the rebuilt files" ticked to have it commit them to the branch it ran on.
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Commit the rebuilt files
+        type: boolean
+        default: false
+  push:
+    paths:
+      - "_tools/print/**"
+      - "_tools/build_print_pdfs.py"
+      - ".github/workflows/build-pdfs.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright and pypdf
+        run: |
+          pip install playwright pypdf
+          python -m playwright install --with-deps chromium
+      - name: Build the PDFs
+        run: python3 _tools/build_print_pdfs.py
+      # If a page overflows, still build the PDFs so the problem can be seen,
+      # but leave the run marked as failed (and commit nothing).
+      - name: Build anyway for inspection
+        if: failure()
+        run: python3 _tools/build_print_pdfs.py --force
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: print-pdfs
+          if-no-files-found: ignore
+          path: |
+            smart-on-crime-washington.pdf
+            smart-on-crime-idaho.pdf
+            smart-on-crime-washington-cover.png
+            smart-on-crime-idaho-cover.png
+      - name: Commit the rebuilt files
+        if: success() && inputs.commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add smart-on-crime-washington.pdf smart-on-crime-idaho.pdf smart-on-crime-washington-cover.png smart-on-crime-idaho-cover.png
+          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+          git commit -m "Rebuild the Washington and Idaho brief PDFs from _tools/print"
+          git push
