@@ -25,7 +25,7 @@ BRIEFS = {
         sub="Idaho and Utah report nearly the same violent crime. Idaho imprisons people at 2.6 times Utah's rate.",
         stat="2.6&times;",
         stat_note="Idaho's state imprisonment rate compared with Utah's (490 vs. 186 per 100,000, 2023)",
-        meta="November 2026 &middot; Updated Nov. 22, 2026 &middot; Idaho and its six neighbors",
+        meta="November 2026 &middot; Updated Nov. 24, 2026 &middot; Idaho and its six neighbors",
         short="Similar Violent Crime, Far More Prison",
     ),
     "long-sentences": dict(

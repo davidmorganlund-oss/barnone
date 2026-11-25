@@ -20,7 +20,6 @@ A multi-page static site for GitHub Pages.
 | reentry.html | Reentry Help |
 | reentry-idaho.html, reentry-washington.html, reentry-oregon.html | State reentry guides (dated "Last checked") |
 | events.html | Events |
-| donate.html | Donate |
 | contact.html | Contact |
 
 Shared files: `site.css` (all styles), `site.js` (menu, copy buttons, motion), `phoenix.png`, `barnone-logo.png` and `favicon.png`. Each brief has a share image (`og-*.png`); Briefs 4 to 6 also have a PDF and a cover image (`*-cover.png`). All files sit in one folder, with no subfolders. Change a style once in `site.css` and every page picks it up.
