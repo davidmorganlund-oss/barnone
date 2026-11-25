@@ -30,8 +30,15 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Build the PDFs
         run: python3 _tools/build_print_pdfs.py
+      # If a page overflows, still build the PDFs so the problem can be seen,
+      # but leave the run marked as failed.
+      - name: Build anyway for inspection
+        if: failure()
+        run: python3 _tools/build_print_pdfs.py --force
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
+          if-no-files-found: ignore
           name: print-pdfs
           path: |
             smart-on-crime-washington.pdf

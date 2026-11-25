@@ -44,10 +44,12 @@ async def build(browser, base, slug, title):
     bad = [r for r in report if r["overflow_px"] > 0]
     for r in report:
         print(f"  page {r['page']:>2}: room at bottom {r['room_px']:>6}px"
-              + (f"  OVERFLOW {r['overflow_px']}px" if r["overflow_px"] else ""))
+              + (f"  OVERFLOW {r['overflow_px']}px at {r['culprit']}" if r["overflow_px"] else ""))
     if bad and "--force" not in sys.argv:
-        raise SystemExit(f"{slug}: content runs into the footer on page(s) "
-                         + ", ".join(str(r["page"]) for r in bad))
+        print(f"{slug}: content runs into the footer on page(s) "
+              + ", ".join(str(r["page"]) for r in bad) + "; PDF not written (use --force to write it anyway)")
+        await page.close()
+        return False
     await page.locator(".page").first.screenshot(path=str(ROOT / f"{slug}-cover.png"))
     pdf = await page.pdf(prefer_css_page_size=True, print_background=True,
                          margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
@@ -62,6 +64,7 @@ async def build(browser, base, slug, title):
     n = len(reader.pages)
     note = "" if n % 4 == 0 else "  (not a multiple of 4: add or trim a page for ledger booklets)"
     print(f"{slug}.pdf: {n} pages{note}")
+    return True
 
 
 async def main():
@@ -73,11 +76,14 @@ async def main():
             browser = await p.chromium.launch(channel="chrome")
         except Exception:
             browser = await p.chromium.launch()
+        ok = True
         for slug in slugs:
             print(slug)
-            await build(browser, base, slug, BRIEFS[slug])
+            ok = await build(browser, base, slug, BRIEFS[slug]) and ok
         await browser.close()
     httpd.shutdown()
+    if not ok:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
