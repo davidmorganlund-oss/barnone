@@ -30,9 +30,9 @@ p{margin:0 0 9pt}
 .kicker{font-size:9pt;line-height:12pt;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--red);margin-bottom:6pt}
 h1{font-size:21pt;line-height:24pt;font-weight:800;margin:0;letter-spacing:-.005em}
 h2{font-size:18pt;line-height:22pt;font-weight:800;margin:0}
-h3{font-size:12pt;line-height:15pt;font-weight:600;margin:14pt 0 8pt}
+h3{font-size:12pt;line-height:15pt;font-weight:600;margin:12pt 0 7pt}
 h4{font-size:10.1pt;line-height:13pt;font-weight:700;margin:0 0 4pt}
-.rule{display:flex;height:4pt;margin:10pt 0 14pt}
+.rule{display:flex;height:4pt;margin:9pt 0 12pt}
 .rule i{flex:1}
 .rule i:nth-child(1){background:var(--ink)}.rule i:nth-child(2){background:var(--dred)}
 .rule i:nth-child(3){background:var(--peach)}.rule i:nth-child(4){background:var(--orange)}
@@ -58,7 +58,7 @@ h4{font-size:10.1pt;line-height:13pt;font-weight:700;margin:0 0 4pt}
 .dark b{color:#fff}
 .card{border:.75pt solid var(--line);border-radius:6pt;padding:10pt 10pt 9pt;background:#fff}
 .card.t{background:var(--tint);border-color:var(--tint)}
-.card p{font-size:9.4pt;line-height:13pt;margin:0 0 5pt}
+.card p{font-size:9.4pt;line-height:12.6pt;margin:0 0 5pt}
 .card p:last-child{margin-bottom:0}
 .card .ask{font-family:"Nunito Sans",sans-serif;font-weight:700;font-size:10.1pt;margin:6pt 0 2pt}
 .grid{display:grid;gap:8pt;margin:8pt 0}
@@ -73,7 +73,7 @@ h4{font-size:10.1pt;line-height:13pt;font-weight:700;margin:0 0 4pt}
 .num{display:inline-flex;align-items:center;justify-content:center;width:18pt;height:18pt;border-radius:50%;background:var(--red);color:#fff;
   font-family:"Nunito Sans",sans-serif;font-weight:800;font-size:9.8pt;flex:none}
 .nl{list-style:none;margin:6pt 0;padding:0}
-.nl li{display:flex;gap:10pt;align-items:flex-start;margin:0 0 7pt;font-size:10.1pt;line-height:15pt}
+.nl li{display:flex;gap:10pt;align-items:flex-start;margin:0 0 5pt;font-size:10.1pt;line-height:15pt}
 .nl li .num{margin-top:-1pt}
 .nl.g2{display:grid;column-gap:18pt;row-gap:6pt}
 .nl.g2 li{margin:0;font-size:9.8pt;line-height:13.5pt}
@@ -81,8 +81,8 @@ h4{font-size:10.1pt;line-height:13pt;font-weight:700;margin:0 0 4pt}
 
 /* tables */
 table{width:100%;border-collapse:collapse;margin:6pt 0}
-th{background:var(--ink);color:#fff;font-size:9pt;line-height:11pt;font-weight:600;text-align:left;padding:7pt 6pt 6pt;vertical-align:bottom}
-td{font-size:9.4pt;line-height:13pt;padding:7pt 6pt 6pt;border-bottom:.75pt solid var(--line);vertical-align:top}
+th{background:var(--ink);color:#fff;font-size:9pt;line-height:11pt;font-weight:600;text-align:left;padding:6pt 6pt 5pt;vertical-align:bottom}
+td{font-size:9.4pt;line-height:12.8pt;padding:5.5pt 6pt 4.5pt;border-bottom:.75pt solid var(--line);vertical-align:top}
 td.b,td b{font-family:"Nunito Sans",sans-serif;font-weight:700}
 tr.hl td{background:var(--tint)}
 .pill{display:inline-block;font-size:8.2pt;line-height:10pt;font-weight:700;padding:2pt 7pt;border-radius:8pt;white-space:nowrap}
