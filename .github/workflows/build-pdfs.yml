@@ -1,12 +1,17 @@
 name: Build print PDFs
 
 # Renders the Washington and Idaho "Smart on Crime, Smart on the Budget" briefs
-# from _tools/print/ and offers the PDFs and cover images as a download.
-# It does not commit anything: download the "print-pdfs" artifact from the run,
-# check it, and commit the files yourself.
+# from _tools/print/. Every run offers the PDFs and cover images as a download
+# (the "print-pdfs" artifact). Run it by hand from the Actions tab with
+# "Commit the rebuilt files" ticked to have it commit them to the branch it ran on.
 
 on:
   workflow_dispatch:
+    inputs:
+      commit:
+        description: Commit the rebuilt files
+        type: boolean
+        default: false
   push:
     paths:
       - "_tools/print/**"
@@ -14,7 +19,7 @@ on:
       - ".github/workflows/build-pdfs.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -31,28 +36,26 @@ jobs:
       - name: Build the PDFs
         run: python3 _tools/build_print_pdfs.py
       # If a page overflows, still build the PDFs so the problem can be seen,
-      # but leave the run marked as failed.
+      # but leave the run marked as failed (and commit nothing).
       - name: Build anyway for inspection
         if: failure()
         run: python3 _tools/build_print_pdfs.py --force
-      - name: TEMP dump page images to log
-        if: always()
-        run: |
-          pip install -q pymupdf
-          python3 - <<'PY'
-          import fitz, base64, glob
-          for f in sorted(glob.glob("smart-on-crime-*.pdf")):
-              for i, p in enumerate(fitz.open(f)):
-                  b = p.get_pixmap(dpi=90).tobytes("jpg", jpg_quality=80)
-                  print(f"@@IMG {f[15:17]}-{i+1:02d} " + base64.b64encode(b).decode())
-          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          if-no-files-found: ignore
           name: print-pdfs
+          if-no-files-found: ignore
           path: |
             smart-on-crime-washington.pdf
             smart-on-crime-idaho.pdf
             smart-on-crime-washington-cover.png
             smart-on-crime-idaho-cover.png
+      - name: Commit the rebuilt files
+        if: success() && inputs.commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add smart-on-crime-washington.pdf smart-on-crime-idaho.pdf smart-on-crime-washington-cover.png smart-on-crime-idaho-cover.png
+          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+          git commit -m "Rebuild the Washington and Idaho brief PDFs from _tools/print"
+          git push
