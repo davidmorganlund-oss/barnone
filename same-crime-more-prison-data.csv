@@ -38,13 +38,13 @@ women_in_prison,Idaho,1296,people,2022,"BJS Prisoners in 2023, Table 2"
 women_in_prison,Idaho,1518,people,2023,"BJS Prisoners in 2023, Table 2"
 women_in_prison,Utah,442,people,2022,"BJS Prisoners in 2023, Table 2"
 women_in_prison,Utah,473,people,2023,"BJS Prisoners in 2023, Table 2"
-people_under_idoc_jurisdiction,Idaho,10023,people,2026-01-01,Idaho Capital Sun via Prison Legal News
-in_state_prison_capacity,Idaho,8200,beds (approx.),2026,Idaho Capital Sun via Prison Legal News
-in_state_prison_capacity,Idaho,7100,beds (approx.),2019,Idaho Capital Sun via Prison Legal News
-held_in_county_jails,Idaho,991,people (monthly projection),2025-10,Idaho Capital Sun via Prison Legal News
-held_out_of_state,Idaho,761,people (monthly projection),2025-10,Idaho Capital Sun via Prison Legal News
-overflow_housing_cost,Idaho,51000000,USD (expected annual),FY2026,Idaho Capital Sun via Prison Legal News
-new_bed_request,Idaho,45300000,USD,FY2027 request,Idaho Department of Correction via East Idaho News
+people_under_idoc_jurisdiction,Idaho,10023,people,2026-01-01,Idaho Capital Sun (Jan. 2026)
+in_state_prison_capacity,Idaho,8200,beds (approx.),2026,Idaho Capital Sun (Jan. 2026)
+in_state_prison_capacity,Idaho,7100,beds (approx.),2019,Idaho Capital Sun (Jan. 2026)
+held_in_county_jails,Idaho,991,people (monthly projection),2025-10,Idaho Capital Sun (Jan. 2026)
+held_out_of_state,Idaho,761,people (monthly projection),2025-10,Idaho Capital Sun (Jan. 2026)
+overflow_housing_cost,Idaho,51000000,USD (expected annual),FY2026,Idaho Capital Sun (Jan. 2026)
+new_bed_request,Idaho,45300000,USD,FY2028 request (2027 session),Idaho Department of Correction via East Idaho News
 daily_cost_prison,Idaho,100,USD per person per day,2026,InvestigateWest via East Idaho News
 daily_cost_parole,Idaho,9,USD per person per day,2026,InvestigateWest via East Idaho News
 admissions_from_revocations_and_riders,Idaho,87,percent of prison admissions,2012,CSG Justice Center
