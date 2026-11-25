@@ -1,4 +1,4 @@
-"""Build print PDFs and cover images for BarNone briefs that are web pages only.
+"""Build print PDFs and cover images for BarNone briefs whose full text is on the web page.
 
 Usage (from the repository root):
     python3 _tools/build_brief_pdfs.py            # all briefs below
@@ -45,6 +45,15 @@ BRIEFS = {
         stat_note="people in Washington prisons would become eligible to ask for review, from 37 of 39 counties",
         meta="November 2026 &middot; Washington, by county",
         short="Who Would Benefit from the Review Act",
+    ),
+    "smart-on-crime-oregon": dict(
+        no=6, place="Oregon",
+        title=["Smart on crime,", "smart on the budget:", "Oregon"], accent=2,
+        sub="Close the Oregon State Penitentiary. Don't build another one.",
+        stat="$1.22 billion",
+        stat_note="to design and build a new penitentiary in DOC's 2027-29 facility plan; about $2.06 billion with 25 years of interest",
+        meta="November 2026 &middot; Updated Nov. 24, 2026 &middot; Oregon, 2027 session",
+        short="Smart on Crime, Smart on the Budget: Oregon",
     ),
 }
 
