@@ -11,7 +11,7 @@ A multi-page static site for GitHub Pages.
 | same-crime-more-prison.html | Research Brief No. 1: Similar violent crime, far more prison (Idaho) |
 | long-sentences.html | Research Brief No. 2: Long and life sentences in Washington |
 | review-act.html | Research Brief No. 3: Who would benefit from the Review Act |
-| smart-on-crime-washington.html | Research Brief No. 4: Smart on Crime, Smart on the Budget (Washington); full brief: smart-on-crime-washington.pdf |
+| smart-on-crime-washington.html | Research Brief No. 4: Smart on Crime, Smart on the Budget: Washington; full brief: smart-on-crime-washington.pdf |
 | smart-on-crime-idaho.html | Research Brief No. 5: Smart on Crime, Smart on the Budget: Idaho; full brief: smart-on-crime-idaho.pdf |
 | smart-on-crime-oregon.html | Research Brief No. 6: Smart on Crime, Smart on the Budget: Oregon; full brief: smart-on-crime-oregon.pdf |
 | session.html | 2027 session bill tracker (reads bills.json) |
